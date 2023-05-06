@@ -22,7 +22,9 @@ appButton.addEventListener("click", () => {
 });
 
 const rollDice = () => {
-	const number = Math.floor(Math.random() * 6);
+	const number = Math.floor(
+		Math.random() * diceElements.length
+	);
 	const diceFace = getDiceFace(number);
 	addListElement(diceFace);
 	appDice.innerHTML = diceFace;
