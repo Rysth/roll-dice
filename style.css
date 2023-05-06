@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+:root {
+	--CL-primary-red: #ff4b4b;
+	--CL-primary-green: #1fb811;
+	--CL-primary-gray: #808080;
+	--CL-primary-blue-accented: #4b57ff;
+
+	--CL-neutral-white: #ffffff;
+	--CL-neutral-black: #000000;
+	--CL-neutral-transparent-black: #00000062;
+
+	--FF-primary-poppins: "Poppins", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	font-family: var(--FF-primary-poppins);
+	padding: 1em 0;
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button {
+	width: 100%;
+	font-family: var(--FF-primary-poppins);
+}
+
+/* App Styles */
+.app {
+	width: min(95%, 40rem);
+	padding: 2em;
+	border-radius: 2em;
+	box-shadow: 0 0 8px var(--CL-neutral-transparent-black);
+	text-align: center;
+}
+
+.app__header {
+	padding: 1em 0;
+}
+
+.app__title {
+	font-size: calc(2rem + 1vw);
+}
+
+.app__dice {
+	font-size: 10rem;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.app__content {
+	padding: 2em 0;
+}
+
+.app__button {
+	width: 30%;
+	padding: 1em 0;
+	border: none;
+	border-radius: 0.5em;
+	box-shadow: 0 0 8px var(--CL-neutral-transparent-black);
+	background-color: var(--CL-primary-blue-accented);
+	color: var(--CL-neutral-white);
+	cursor: pointer;
+	margin: 1em 0;
+	font-size: calc(1rem + 0.3vw);
+	transition: 0.15s;
+}
+
+.app__button:hover {
+	background-color: var(--CL-neutral-black);
+}
+
+.app__list {
+	list-style-type: none;
+	text-align: left;
+	font-size: calc(1.25rem + 0.3vw);
+	display: grid;
+	padding: 0.5em;
+	gap: 1em;
+	max-height: 20rem;
+	overflow: auto;
+}
+
+.app__item {
+	padding: 0.35em 1em;
+	border-radius: 0.5em;
+	box-shadow: 0 0 8px var(--CL-neutral-transparent-black);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.app__value {
+	font-size: 3rem;
+}
+
+/* Animations */
+
+.animation__roll {
+	animation-name: roll;
+}
+
+@keyframes roll {
+	0% {
+		transform: rotateY(0deg) rotateX(0deg);
+	}
+	100% {
+		transform: rotateY(720deg) rotateX(720deg);
+	}
+}
